@@ -1,0 +1,23 @@
+EDiffAdminBundle_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: EDiffAdminBundle:Default:index }
+
+EDiffAdminBundle_crud:
+    resource: "@EDiffAdminBundle/Resources/config/routing/anneescolaire.yml"
+    prefix:   /anneescolaire
+    
+EDiffAdminBundle_matiere_crud:
+    resource: "@EDiffAdminBundle/Resources/config/routing/matiere.yml"
+    prefix:   /matiere
+
+EDiffAdminBundle_classe:
+    resource: "@EDiffAdminBundle/Resources/config/routing/classe.yml"
+    prefix:   /classe
+
+EDiffAdminBundle_competence:
+    resource: "@EDiffAdminBundle/Resources/config/routing/competence.yml"
+    prefix:   /competence
+    
+EDiffAdminBundle_user:
+    resource: "@EDiffAdminBundle/Resources/config/routing/user.yml"
+    prefix:   /user
