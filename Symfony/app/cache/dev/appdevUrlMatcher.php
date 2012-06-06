@@ -428,6 +428,118 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        if (0 === strpos($pathinfo, '/question')) {
+            // question
+            if (rtrim($pathinfo, '/') === '/question') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'question');
+                }
+                return array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionController::indexAction',  '_route' => 'question',);
+            }
+
+            // question_show
+            if (preg_match('#^/question/(?P<id>[^/]+?)/show$#xs', $pathinfo, $matches)) {
+                return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionController::showAction',)), array('_route' => 'question_show'));
+            }
+
+            // question_new
+            if ($pathinfo === '/question/new') {
+                return array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionController::newAction',  '_route' => 'question_new',);
+            }
+
+            // question_create
+            if ($pathinfo === '/question/create') {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_question_create;
+                }
+                return array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionController::createAction',  '_route' => 'question_create',);
+            }
+            not_question_create:
+
+            // question_edit
+            if (preg_match('#^/question/(?P<id>[^/]+?)/edit$#xs', $pathinfo, $matches)) {
+                return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionController::editAction',)), array('_route' => 'question_edit'));
+            }
+
+            // question_update
+            if (preg_match('#^/question/(?P<id>[^/]+?)/update$#xs', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_question_update;
+                }
+                return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionController::updateAction',)), array('_route' => 'question_update'));
+            }
+            not_question_update:
+
+            // question_delete
+            if (preg_match('#^/question/(?P<id>[^/]+?)/delete$#xs', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_question_delete;
+                }
+                return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionController::deleteAction',)), array('_route' => 'question_delete'));
+            }
+            not_question_delete:
+
+        }
+
+        if (0 === strpos($pathinfo, '/reponse')) {
+            // reponse
+            if (rtrim($pathinfo, '/') === '/reponse') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'reponse');
+                }
+                return array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\ReponseController::indexAction',  '_route' => 'reponse',);
+            }
+
+            // reponse_show
+            if (preg_match('#^/reponse/(?P<id>[^/]+?)/show$#xs', $pathinfo, $matches)) {
+                return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\ReponseController::showAction',)), array('_route' => 'reponse_show'));
+            }
+
+            // reponse_new
+            if ($pathinfo === '/reponse/new') {
+                return array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\ReponseController::newAction',  '_route' => 'reponse_new',);
+            }
+
+            // reponse_create
+            if ($pathinfo === '/reponse/create') {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_reponse_create;
+                }
+                return array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\ReponseController::createAction',  '_route' => 'reponse_create',);
+            }
+            not_reponse_create:
+
+            // reponse_edit
+            if (preg_match('#^/reponse/(?P<id>[^/]+?)/edit$#xs', $pathinfo, $matches)) {
+                return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\ReponseController::editAction',)), array('_route' => 'reponse_edit'));
+            }
+
+            // reponse_update
+            if (preg_match('#^/reponse/(?P<id>[^/]+?)/update$#xs', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_reponse_update;
+                }
+                return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\ReponseController::updateAction',)), array('_route' => 'reponse_update'));
+            }
+            not_reponse_update:
+
+            // reponse_delete
+            if (preg_match('#^/reponse/(?P<id>[^/]+?)/delete$#xs', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_reponse_delete;
+                }
+                return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\ReponseController::deleteAction',)), array('_route' => 'reponse_delete'));
+            }
+            not_reponse_delete:
+
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }

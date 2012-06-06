@@ -70,7 +70,7 @@ class Competence
         return $this->matiere;
     }
 
-    // Ici, on force le type de l'argument à être une instance de notre entité Adresse.
+    // Ici, on force le type de l'argument à être une instance de notre entité Matiere.
     public function setMatiere(\EDiff\Bundle\AdminBundle\Entity\Matiere $matiere)
     {
         $this->matiere = $matiere;

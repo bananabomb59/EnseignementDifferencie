@@ -69,6 +69,20 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
        'user_edit' => true,
        'user_update' => true,
        'user_delete' => true,
+       'question' => true,
+       'question_show' => true,
+       'question_new' => true,
+       'question_create' => true,
+       'question_edit' => true,
+       'question_update' => true,
+       'question_delete' => true,
+       'reponse' => true,
+       'reponse_show' => true,
+       'reponse_new' => true,
+       'reponse_create' => true,
+       'reponse_edit' => true,
+       'reponse_update' => true,
+       'reponse_delete' => true,
     );
 
     /**
@@ -370,5 +384,75 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
     private function getuser_deleteRouteInfo()
     {
         return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\UserController::deleteAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/delete',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/user',  ),));
+    }
+
+    private function getquestionRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/question/',  ),));
+    }
+
+    private function getquestion_showRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionController::showAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/show',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/question',  ),));
+    }
+
+    private function getquestion_newRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionController::newAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/question/new',  ),));
+    }
+
+    private function getquestion_createRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionController::createAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/question/create',  ),));
+    }
+
+    private function getquestion_editRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionController::editAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/edit',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/question',  ),));
+    }
+
+    private function getquestion_updateRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionController::updateAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/update',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/question',  ),));
+    }
+
+    private function getquestion_deleteRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionController::deleteAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/delete',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/question',  ),));
+    }
+
+    private function getreponseRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\ReponseController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/reponse/',  ),));
+    }
+
+    private function getreponse_showRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\ReponseController::showAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/show',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/reponse',  ),));
+    }
+
+    private function getreponse_newRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\ReponseController::newAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/reponse/new',  ),));
+    }
+
+    private function getreponse_createRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\ReponseController::createAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/reponse/create',  ),));
+    }
+
+    private function getreponse_editRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\ReponseController::editAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/edit',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/reponse',  ),));
+    }
+
+    private function getreponse_updateRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\ReponseController::updateAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/update',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/reponse',  ),));
+    }
+
+    private function getreponse_deleteRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\ReponseController::deleteAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/delete',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/reponse',  ),));
     }
 }

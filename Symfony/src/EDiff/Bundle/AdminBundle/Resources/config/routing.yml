@@ -21,3 +21,11 @@ EDiffAdminBundle_competence:
 EDiffAdminBundle_user:
     resource: "@EDiffAdminBundle/Resources/config/routing/user.yml"
     prefix:   /user
+    
+EDiffAdminBundle_question:
+    resource: "@EDiffAdminBundle/Resources/config/routing/question.yml"
+    prefix:   /question
+
+EDiffAdminBundle_reponse:
+    resource: "@EDiffAdminBundle/Resources/config/routing/reponse.yml"
+    prefix:   /reponse
