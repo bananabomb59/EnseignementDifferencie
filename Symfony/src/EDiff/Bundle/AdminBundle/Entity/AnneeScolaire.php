@@ -85,4 +85,9 @@ class AnneeScolaire
     {
         return $this->annee_fin;
     }
+    
+    public function __toString()
+    {
+    	return "".$this->annee_debut." / ".$this->annee_fin;
+    }
 }

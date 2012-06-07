@@ -1,6 +1,6 @@
 <?php
 
-/* SensioDistributionBundle::Configurator/form.html.twig */
+/* SensioDistributionBundle:Configurator:form.html.twig */
 class __TwigTemplate_20146fd422fac9a0a2282eddd132b60c extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -100,7 +100,7 @@ class __TwigTemplate_20146fd422fac9a0a2282eddd132b60c extends Twig_Template
 
     public function getTemplateName()
     {
-        return "SensioDistributionBundle::Configurator/form.html.twig";
+        return "SensioDistributionBundle:Configurator:form.html.twig";
     }
 
     public function isTraitable()

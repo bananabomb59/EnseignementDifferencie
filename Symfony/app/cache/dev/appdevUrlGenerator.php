@@ -83,6 +83,20 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
        'reponse_edit' => true,
        'reponse_update' => true,
        'reponse_delete' => true,
+       'questionnaire' => true,
+       'questionnaire_show' => true,
+       'questionnaire_new' => true,
+       'questionnaire_create' => true,
+       'questionnaire_edit' => true,
+       'questionnaire_update' => true,
+       'questionnaire_delete' => true,
+       'questionnaireeleve' => true,
+       'questionnaireeleve_show' => true,
+       'questionnaireeleve_new' => true,
+       'questionnaireeleve_create' => true,
+       'questionnaireeleve_edit' => true,
+       'questionnaireeleve_update' => true,
+       'questionnaireeleve_delete' => true,
     );
 
     /**
@@ -454,5 +468,75 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
     private function getreponse_deleteRouteInfo()
     {
         return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\ReponseController::deleteAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/delete',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/reponse',  ),));
+    }
+
+    private function getquestionnaireRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/questionnaire/',  ),));
+    }
+
+    private function getquestionnaire_showRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireController::showAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/show',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/questionnaire',  ),));
+    }
+
+    private function getquestionnaire_newRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireController::newAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/questionnaire/new',  ),));
+    }
+
+    private function getquestionnaire_createRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireController::createAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/questionnaire/create',  ),));
+    }
+
+    private function getquestionnaire_editRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireController::editAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/edit',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/questionnaire',  ),));
+    }
+
+    private function getquestionnaire_updateRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireController::updateAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/update',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/questionnaire',  ),));
+    }
+
+    private function getquestionnaire_deleteRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireController::deleteAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/delete',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/questionnaire',  ),));
+    }
+
+    private function getquestionnaireeleveRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireEleveController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/questionnaireeleve/',  ),));
+    }
+
+    private function getquestionnaireeleve_showRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireEleveController::showAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/show',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/questionnaireeleve',  ),));
+    }
+
+    private function getquestionnaireeleve_newRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireEleveController::newAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/questionnaireeleve/new',  ),));
+    }
+
+    private function getquestionnaireeleve_createRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireEleveController::createAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/questionnaireeleve/create',  ),));
+    }
+
+    private function getquestionnaireeleve_editRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireEleveController::editAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/edit',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/questionnaireeleve',  ),));
+    }
+
+    private function getquestionnaireeleve_updateRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireEleveController::updateAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/update',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/questionnaireeleve',  ),));
+    }
+
+    private function getquestionnaireeleve_deleteRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireEleveController::deleteAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/delete',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/questionnaireeleve',  ),));
     }
 }

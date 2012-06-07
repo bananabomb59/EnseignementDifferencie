@@ -58,4 +58,9 @@ class Classe
     {
         return $this->libelle;
     }
+    
+	public function __toString()
+    {
+    	return $this->libelle;
+    }
 }

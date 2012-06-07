@@ -29,3 +29,11 @@ EDiffAdminBundle_question:
 EDiffAdminBundle_reponse:
     resource: "@EDiffAdminBundle/Resources/config/routing/reponse.yml"
     prefix:   /reponse
+
+EDiffAdminBundle_questionnaire:
+    resource: "@EDiffAdminBundle/Resources/config/routing/questionnaire.yml"
+    prefix:   /questionnaire
+    
+EDiffAdminBundle_questionnaireeleve:
+    resource: "@EDiffAdminBundle/Resources/config/routing/questionnaireeleve.yml"
+    prefix:   /questionnaireeleve

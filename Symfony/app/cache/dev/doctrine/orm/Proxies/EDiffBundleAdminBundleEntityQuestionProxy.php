@@ -78,6 +78,18 @@ class EDiffBundleAdminBundleEntityQuestionProxy extends \EDiff\Bundle\AdminBundl
         return parent::getLibelle();
     }
 
+    public function getMatiere()
+    {
+        $this->__load();
+        return parent::getMatiere();
+    }
+
+    public function setMatiere(\EDiff\Bundle\AdminBundle\Entity\Matiere $matiere)
+    {
+        $this->__load();
+        return parent::setMatiere($matiere);
+    }
+
     public function __toString()
     {
         $this->__load();
@@ -87,7 +99,7 @@ class EDiffBundleAdminBundleEntityQuestionProxy extends \EDiff\Bundle\AdminBundl
 
     public function __sleep()
     {
-        return array('__isInitialized__', 'id', 'type', 'niveau', 'libelle');
+        return array('__isInitialized__', 'id', 'type', 'niveau', 'libelle', 'matiere');
     }
 
     public function __clone()

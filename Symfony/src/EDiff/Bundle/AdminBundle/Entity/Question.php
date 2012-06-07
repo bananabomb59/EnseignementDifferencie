@@ -42,7 +42,12 @@ class Question
      */
     private $libelle;
 
-
+    /**
+     * @ORM\ManyToOne(targetEntity="EDiff\Bundle\AdminBundle\Entity\Matiere")
+     */
+    private $matiere;
+    
+    
     /**
      * Get id
      *
@@ -111,6 +116,18 @@ class Question
     public function getLibelle()
     {
         return $this->libelle;
+    }
+    
+    // On définit le getter et le setter associé à la relation Matiere.
+    public function getMatiere()
+    {
+        return $this->matiere;
+    }
+
+    // Ici, on force le type de l'argument à être une instance de notre entité Matiere.
+    public function setMatiere(\EDiff\Bundle\AdminBundle\Entity\Matiere $matiere)
+    {
+        $this->matiere = $matiere;
     }
     
 	/**

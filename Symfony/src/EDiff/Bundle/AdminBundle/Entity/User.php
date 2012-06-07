@@ -193,4 +193,9 @@ class User
     {
         return $this->date_naissance;
     }
+    
+    public function __toString()
+    {
+    	return $this->prenom." ".$this->nom;
+    }
 }

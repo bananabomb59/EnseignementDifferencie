@@ -482,6 +482,118 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
             not_question_delete:
 
+            if (0 === strpos($pathinfo, '/questionnaire')) {
+                // questionnaire
+                if (rtrim($pathinfo, '/') === '/questionnaire') {
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'questionnaire');
+                    }
+                    return array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireController::indexAction',  '_route' => 'questionnaire',);
+                }
+
+                // questionnaire_show
+                if (preg_match('#^/questionnaire/(?P<id>[^/]+?)/show$#xs', $pathinfo, $matches)) {
+                    return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireController::showAction',)), array('_route' => 'questionnaire_show'));
+                }
+
+                // questionnaire_new
+                if ($pathinfo === '/questionnaire/new') {
+                    return array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireController::newAction',  '_route' => 'questionnaire_new',);
+                }
+
+                // questionnaire_create
+                if ($pathinfo === '/questionnaire/create') {
+                    if ($this->context->getMethod() != 'POST') {
+                        $allow[] = 'POST';
+                        goto not_questionnaire_create;
+                    }
+                    return array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireController::createAction',  '_route' => 'questionnaire_create',);
+                }
+                not_questionnaire_create:
+
+                // questionnaire_edit
+                if (preg_match('#^/questionnaire/(?P<id>[^/]+?)/edit$#xs', $pathinfo, $matches)) {
+                    return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireController::editAction',)), array('_route' => 'questionnaire_edit'));
+                }
+
+                // questionnaire_update
+                if (preg_match('#^/questionnaire/(?P<id>[^/]+?)/update$#xs', $pathinfo, $matches)) {
+                    if ($this->context->getMethod() != 'POST') {
+                        $allow[] = 'POST';
+                        goto not_questionnaire_update;
+                    }
+                    return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireController::updateAction',)), array('_route' => 'questionnaire_update'));
+                }
+                not_questionnaire_update:
+
+                // questionnaire_delete
+                if (preg_match('#^/questionnaire/(?P<id>[^/]+?)/delete$#xs', $pathinfo, $matches)) {
+                    if ($this->context->getMethod() != 'POST') {
+                        $allow[] = 'POST';
+                        goto not_questionnaire_delete;
+                    }
+                    return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireController::deleteAction',)), array('_route' => 'questionnaire_delete'));
+                }
+                not_questionnaire_delete:
+
+                if (0 === strpos($pathinfo, '/questionnaireeleve')) {
+                    // questionnaireeleve
+                    if (rtrim($pathinfo, '/') === '/questionnaireeleve') {
+                        if (substr($pathinfo, -1) !== '/') {
+                            return $this->redirect($pathinfo.'/', 'questionnaireeleve');
+                        }
+                        return array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireEleveController::indexAction',  '_route' => 'questionnaireeleve',);
+                    }
+
+                    // questionnaireeleve_show
+                    if (preg_match('#^/questionnaireeleve/(?P<id>[^/]+?)/show$#xs', $pathinfo, $matches)) {
+                        return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireEleveController::showAction',)), array('_route' => 'questionnaireeleve_show'));
+                    }
+
+                    // questionnaireeleve_new
+                    if ($pathinfo === '/questionnaireeleve/new') {
+                        return array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireEleveController::newAction',  '_route' => 'questionnaireeleve_new',);
+                    }
+
+                    // questionnaireeleve_create
+                    if ($pathinfo === '/questionnaireeleve/create') {
+                        if ($this->context->getMethod() != 'POST') {
+                            $allow[] = 'POST';
+                            goto not_questionnaireeleve_create;
+                        }
+                        return array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireEleveController::createAction',  '_route' => 'questionnaireeleve_create',);
+                    }
+                    not_questionnaireeleve_create:
+
+                    // questionnaireeleve_edit
+                    if (preg_match('#^/questionnaireeleve/(?P<id>[^/]+?)/edit$#xs', $pathinfo, $matches)) {
+                        return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireEleveController::editAction',)), array('_route' => 'questionnaireeleve_edit'));
+                    }
+
+                    // questionnaireeleve_update
+                    if (preg_match('#^/questionnaireeleve/(?P<id>[^/]+?)/update$#xs', $pathinfo, $matches)) {
+                        if ($this->context->getMethod() != 'POST') {
+                            $allow[] = 'POST';
+                            goto not_questionnaireeleve_update;
+                        }
+                        return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireEleveController::updateAction',)), array('_route' => 'questionnaireeleve_update'));
+                    }
+                    not_questionnaireeleve_update:
+
+                    // questionnaireeleve_delete
+                    if (preg_match('#^/questionnaireeleve/(?P<id>[^/]+?)/delete$#xs', $pathinfo, $matches)) {
+                        if ($this->context->getMethod() != 'POST') {
+                            $allow[] = 'POST';
+                            goto not_questionnaireeleve_delete;
+                        }
+                        return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireEleveController::deleteAction',)), array('_route' => 'questionnaireeleve_delete'));
+                    }
+                    not_questionnaireeleve_delete:
+
+                }
+
+            }
+
         }
 
         if (0 === strpos($pathinfo, '/reponse')) {
