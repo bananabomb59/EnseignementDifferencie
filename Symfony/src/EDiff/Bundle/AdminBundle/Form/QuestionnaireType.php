@@ -11,10 +11,12 @@ class QuestionnaireType extends AbstractType
     {
         $builder
             ->add('titre')
+            ->add('statut')
             ->add('nb_questions_a_repondre')
             ->add('matiere')
             ->add('anneescolaire')
             ->add('classe')
+            ->add('questions')
         ;
     }
 

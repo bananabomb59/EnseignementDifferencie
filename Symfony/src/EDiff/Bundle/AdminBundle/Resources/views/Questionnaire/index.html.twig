@@ -5,6 +5,7 @@
         <tr>
             <th>Id</th>
             <th>Titre</th>
+            <th>Statut</th>
             <th>Nb_questions_a_repondre</th>
             <th>Actions</th>
         </tr>
@@ -14,6 +15,7 @@
         <tr>
             <td><a href="{{ path('questionnaire_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
             <td>{{ entity.titre }}</td>
+            <td>{{ entity.statut }}</td>
             <td>{{ entity.nbquestionsarepondre }}</td>
             <td>
                 <ul>

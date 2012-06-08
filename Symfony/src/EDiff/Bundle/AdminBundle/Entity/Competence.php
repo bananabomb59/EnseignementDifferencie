@@ -76,4 +76,9 @@ class Competence
         $this->matiere = $matiere;
     }
     
+    public function __toString()
+    {
+    	return $this->libelle;
+    }
+    
 }

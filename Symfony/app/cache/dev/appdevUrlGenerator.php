@@ -97,6 +97,20 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
        'questionnaireeleve_edit' => true,
        'questionnaireeleve_update' => true,
        'questionnaireeleve_delete' => true,
+       'competenceeleveannee' => true,
+       'competenceeleveannee_show' => true,
+       'competenceeleveannee_new' => true,
+       'competenceeleveannee_create' => true,
+       'competenceeleveannee_edit' => true,
+       'competenceeleveannee_update' => true,
+       'competenceeleveannee_delete' => true,
+       'competenceclasseannee' => true,
+       'competenceclasseannee_show' => true,
+       'competenceclasseannee_new' => true,
+       'competenceclasseannee_create' => true,
+       'competenceclasseannee_edit' => true,
+       'competenceclasseannee_update' => true,
+       'competenceclasseannee_delete' => true,
     );
 
     /**
@@ -538,5 +552,75 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
     private function getquestionnaireeleve_deleteRouteInfo()
     {
         return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\QuestionnaireEleveController::deleteAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/delete',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/questionnaireeleve',  ),));
+    }
+
+    private function getcompetenceeleveanneeRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\CompetenceEleveAnneeController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/competenceeleveannee/',  ),));
+    }
+
+    private function getcompetenceeleveannee_showRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\CompetenceEleveAnneeController::showAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/show',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/competenceeleveannee',  ),));
+    }
+
+    private function getcompetenceeleveannee_newRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\CompetenceEleveAnneeController::newAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/competenceeleveannee/new',  ),));
+    }
+
+    private function getcompetenceeleveannee_createRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\CompetenceEleveAnneeController::createAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/competenceeleveannee/create',  ),));
+    }
+
+    private function getcompetenceeleveannee_editRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\CompetenceEleveAnneeController::editAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/edit',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/competenceeleveannee',  ),));
+    }
+
+    private function getcompetenceeleveannee_updateRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\CompetenceEleveAnneeController::updateAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/update',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/competenceeleveannee',  ),));
+    }
+
+    private function getcompetenceeleveannee_deleteRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\CompetenceEleveAnneeController::deleteAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/delete',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/competenceeleveannee',  ),));
+    }
+
+    private function getcompetenceclasseanneeRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\CompetenceClasseAnneeController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/competenceclasseannee/',  ),));
+    }
+
+    private function getcompetenceclasseannee_showRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\CompetenceClasseAnneeController::showAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/show',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/competenceclasseannee',  ),));
+    }
+
+    private function getcompetenceclasseannee_newRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\CompetenceClasseAnneeController::newAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/competenceclasseannee/new',  ),));
+    }
+
+    private function getcompetenceclasseannee_createRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\CompetenceClasseAnneeController::createAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/competenceclasseannee/create',  ),));
+    }
+
+    private function getcompetenceclasseannee_editRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\CompetenceClasseAnneeController::editAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/edit',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/competenceclasseannee',  ),));
+    }
+
+    private function getcompetenceclasseannee_updateRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\CompetenceClasseAnneeController::updateAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/update',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/competenceclasseannee',  ),));
+    }
+
+    private function getcompetenceclasseannee_deleteRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'EDiff\\Bundle\\AdminBundle\\Controller\\CompetenceClasseAnneeController::deleteAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/delete',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/competenceclasseannee',  ),));
     }
 }

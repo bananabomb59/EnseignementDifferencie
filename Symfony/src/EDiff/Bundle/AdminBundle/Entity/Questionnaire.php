@@ -27,6 +27,13 @@ class Questionnaire
      * @ORM\Column(name="titre", type="string", length=255)
      */
     private $titre;
+    
+    /**
+     * @var string $statut
+     *
+     * @ORM\Column(name="statut", type="string", length=255)
+     */
+    private $statut;    
         
     /**
      * @var smallint $nb_questions_a_repondre
@@ -78,12 +85,33 @@ class Questionnaire
     /**
      * Get titre
      *
-     * @return string² 
+     * @return string 
      */
     public function getTitre()
     {
         return $this->titre;
     }
+
+    /**
+     * Set statut
+     *
+     * @param string $statut
+     */
+    public function setStatut($statut)
+    {
+        $this->statut = $statut;
+    }
+
+    /**
+     * Get statut
+     *
+     * @return string 
+     */
+    public function getStatut()
+    {
+        return $this->statut;
+    }
+       
         
     /**
      * Set nb_questions_a_repondre

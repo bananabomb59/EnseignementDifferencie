@@ -37,3 +37,11 @@ EDiffAdminBundle_questionnaire:
 EDiffAdminBundle_questionnaireeleve:
     resource: "@EDiffAdminBundle/Resources/config/routing/questionnaireeleve.yml"
     prefix:   /questionnaireeleve
+    
+EDiffAdminBundle_competenceeleveannee:
+    resource: "@EDiffAdminBundle/Resources/config/routing/competenceeleveannee.yml"
+    prefix:   /competenceeleveannee 
+    
+EDiffAdminBundle_competenceclasseannee:
+    resource: "@EDiffAdminBundle/Resources/config/routing/competenceclasseannee.yml"
+    prefix:   /competenceclasseannee       
