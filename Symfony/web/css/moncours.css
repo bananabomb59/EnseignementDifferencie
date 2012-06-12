@@ -7,21 +7,47 @@ body {
 
 }
 
-.hero-unit {
-	height: 300px;
+.my-unit {
+  padding: 60px;
+  margin-bottom: 30px;
+  background-color: #eeeeee;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
 }
-.hero-unit h1 {
+
+.my-unit h1 {
+  margin-bottom: 0;
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: inherit;
+}
+
+.my-unit p {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 27px;
+  color: inherit;
+}
+
+.my-unit h1 {
 	margin-bottom:0.5em;
 }
-.hero-unit label {
+.my-unit label {
 	width:100px;
 	float:left;
 	padding-top:4px;
 	margin-bottom:0;
 }
-.hero-unit input {
+.my-unit input {
 	margin-top:0;
 }
-.hero-unit form {
+.my-unit form {
 	margin-bottom: 5px;
+}
+
+.questionnaire_ferme {
+	color:red;
+	font-style:italic
 }
