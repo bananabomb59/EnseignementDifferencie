@@ -31,6 +31,13 @@ body {
   color: inherit;
 }
 
+.my-unit p.question {
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 27px;
+  color: inherit;
+}
+
 .my-unit h1 {
 	margin-bottom:0.5em;
 }
@@ -50,4 +57,19 @@ body {
 .questionnaire_ferme {
 	color:red;
 	font-style:italic
+}
+
+.reponses label{
+	float:none;
+	display:inline;
+	margin-left: 5px;
+    margin-right: 20px;
+}
+
+.no-margin {
+	margin:0;
+}
+
+.question_suivante {
+	text-align: right;
 }

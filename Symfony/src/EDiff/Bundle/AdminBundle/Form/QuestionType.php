@@ -13,6 +13,7 @@ class QuestionType extends AbstractType
             ->add('type')
             ->add('niveau')
             ->add('libelle')
+            ->add('pathtodocument')
             ->add('matiere')
         ;
     }

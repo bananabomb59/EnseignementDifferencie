@@ -47,6 +47,12 @@ class Question
      */
     private $matiere;
     
+    /**
+     * @var string $pathtodocument
+     *
+     * @ORM\Column(name="pathtodocument", type="string", length=255)
+     */
+    private $pathtodocument;
     
     /**
      * Get id
@@ -116,6 +122,26 @@ class Question
     public function getLibelle()
     {
         return $this->libelle;
+    }
+    
+	/**
+     * Set pathtodocument
+     *
+     * @param string $pathtodocument
+     */
+    public function setPathtodocument($pathtodocument)
+    {
+        $this->pathtodocument = $pathtodocument;
+    }
+
+    /**
+     * Get pathtodocument
+     *
+     * @return string 
+     */
+    public function getPathtodocument()
+    {
+        return $this->pathtodocument;
     }
     
     // On définit le getter et le setter associé à la relation Matiere.
