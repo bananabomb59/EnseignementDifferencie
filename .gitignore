@@ -167,6 +167,9 @@ pip-log.txt
 ########
 ## Symfony
 ########
-
-*.log
-Symfony\app\cache\*
+Symfony/web/bundles/
+Symfony/app/bootstrap*
+Symfony/app/cache/*
+Symfony/app/logs/*
+Symfony/vendor/
+Symfony/app/config/parameters.ini
